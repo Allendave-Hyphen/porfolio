@@ -1,0 +1,38 @@
+.nezuko{
+    --s: #b7afa4;
+    --b: #121013;
+
+    height: min(450px, 98vh, 75vw);
+    aspect-ratio: 1.3;
+    margin: auto auto 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.nezuko:before{
+    content:"";
+    position: absolute;
+    inset: 56% 26% 0% 26%;
+    background: #0a0b0f;
+    z-index: -1;
+}
+.nezuko:after{
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 1.5%;
+    background: linear-gradient(#807681 70%, #0000);
+    top: 30%;
+    left: 43%;
+    mix-blend-mode: darken;
+    clip-path: polygon(1% 0, 100% 0, 100% 100%, 0 100%);
+}
+.face{
+    position: absolute;
+    inset: 22% 30% 12% 30.5%;
+    background: radial-gradient(97% 100% at 100% 100%, #0000 99%, #7f757e) 0 0/58%
+    47%,
+    radial-gradient(100% 100% at 100% 100% #0000 99%, #7f757e) 0 0/75% 42%,
+    radial-gradient(100% 100% at 0 100%, #0000 98%, #7f757e) 100% 0%/48% 44%,
+    linear-gradient(var(--s) 0 0)top/100% 46%;
+}
